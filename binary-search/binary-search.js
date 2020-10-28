@@ -12,22 +12,27 @@ TODOS: * binarySearch is a function that takes an array and a target value. If t
 */
 
 
+// const binarySearch = (array, target) => {
+// 	//if empty array, return false
+// 	if(!array.length) return false;
+
+// 	//what if multidim array
+
+// 	//else loop through the array
+// 	for(let i = 0; i < array.length; i++){
+// 		if(array[i] === target){
+// 			return true;
+// 		}
+// 	}
+
+// 	return false;
+
+// };
+
 const binarySearch = (array, target) => {
-	//if empty array, return false
-	if(!array.length) return false;
+	if()
 
-	//what if multidim array
-
-	//else loop through the array
-	for(let i = 0; i < array.length; i++){
-		if(array[i] === target){
-			return true;
-		}
-	}
-
-	return false;
-
-};
+}
 
 // const binarySearch = (array, target) => {
 // 	let targetArray = array[target]

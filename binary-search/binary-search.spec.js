@@ -5,6 +5,9 @@ const binarySearch = require('./binary-search');
 const test1 = [1,3,4,5,10,15,20,22,23,98,1000];
 const test2 = [-3,-2,0, 9, 10, 11, 12, 15, 17, 18, 19, 20];
 const test3 = [-0.5, 0.03, 2.6, 3, 3.5, 3.777777, 5];
+const test4 = [];
+const multiDim = [11,24,2,[4,[4,22]],8,3];
+
 
 
 describe('Binary Search', () => {
@@ -20,6 +23,16 @@ describe('Binary Search', () => {
 		expect(binarySearch(test3, 4)).to.equal(false);
 	});
 
+
 	//(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)
+
+	it('returns false if array passed is an empty array', () => {
+		expect(binarySearch(test4, 25)).to.equal(false);
+	});
+
+	it('searches through a multidimensional array', () => {
+		expect(binarySearch(multiDim, 22)).to.equal(true);
+	});
+
 
 });
