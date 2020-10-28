@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Complete this algo
 /*
@@ -10,7 +10,6 @@ TODOS: * binarySearch is a function that takes an array and a target value. If t
 ! * What if multi-dimensional array?
 ! * What if we pass in a value that isn't a number(like if you pass in a target that is "6" but looking for 6) or target value is an array?
 */
-
 
 // const binarySearch = (array, target) => {
 // 	//if empty array, return false
@@ -29,19 +28,28 @@ TODOS: * binarySearch is a function that takes an array and a target value. If t
 
 // };
 
-const binarySearch = (array, target) => {
-	if()
-
-}
-
 // const binarySearch = (array, target) => {
-// 	let targetArray = array[target]
-// 	if(targetArray === undefined){
-// 		return false
-// 	}
-// 	return true
-// };
+// 	if()
 
+// }
+
+const binarySearch = (array, target) => {
+  return array.some((row) => {
+    if (Array.isArray(row)) {
+      return binarySearch(row, target);
+    }
+    return row === target;
+  });
+
+  //   if (array.filter(Array.isArray).length) {
+  //     return array.some((row) => row.includes(target));
+  //   } else {
+  //     return array.includes(target);
+  //   }
+
+  // 	let targetArray = array.includes(target);
+  //   return targetArray;
+};
 
 /*
 	EXTRA CREDIT:
@@ -52,4 +60,4 @@ const binarySearch = (array, target) => {
 
 */
 
-module.exports = binarySearch
+module.exports = binarySearch;
